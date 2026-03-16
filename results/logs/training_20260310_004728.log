@@ -1,0 +1,34 @@
+======================================================================
+PointNet++ Training — Point Cloud Classification
+======================================================================
+  Timestamp  : 20260310_004728
+  Device     : mps
+  NUM_POINTS : 256
+  BATCH_SIZE : 32
+  NUM_EPOCHS : 100
+  LR         : 0.001
+  WEIGHT_DECAY: 0.0001
+  LR_STEP    : 20  GAMMA=0.5
+  AUGMENT    : True
+  CLASS_WGTS : True
+
+Loading datasets ...
+  Train class distribution:
+    background     :  22764
+    bicyclist      :    913
+    car            :   4900
+    pedestrian     :    885
+  Total train :  29462
+  Total val   :  12628
+
+  Class weights (inverse-freq):
+    background     : 0.3236
+    bicyclist      : 8.0674
+    car            : 1.5032
+    pedestrian     : 8.3226
+
+  Model params: 1,463,876
+
+======================================================================
+Training
+======================================================================

@@ -1,0 +1,59 @@
+======================================================================
+PointNet++ — Test-Set Evaluation
+======================================================================
+  Timestamp       : 20260310_111244
+  Device          : mps
+  CHECKPOINT_PATH : checkpoints/best_model.pth
+  TEST_DIR        : data/test
+  NUM_POINTS      : 256
+  BATCH_SIZE      : 64
+
+  Checkpoint from epoch : 39
+  Val Macro-F1 at save  : 0.7801
+  Classes               : ['background', 'bicyclist', 'car', 'pedestrian']
+
+Loading test dataset ...
+  Test class distribution:
+    background     :   8135
+    bicyclist      :    330
+    car            :   1755
+    pedestrian     :    320
+  Total test samples: 10540
+
+Running inference ...
+======================================================================
+Test Results
+======================================================================
+  Overall Accuracy  : 0.8982  (89.82%)
+  Macro F1-Score    : 0.7741   ← primary metric
+  Weighted F1-Score : 0.8985
+
+  Per-Class Classification Report:
+                  precision    recall  f1-score   support
+    
+      background     0.9447    0.9281    0.9363      8135
+       bicyclist     0.8080    0.6121    0.6966       330
+             car     0.7534    0.8632    0.8046      1755
+      pedestrian     0.6969    0.6250    0.6590       320
+    
+        accuracy                         0.8982     10540
+       macro avg     0.8007    0.7571    0.7741     10540
+    weighted avg     0.9010    0.8982    0.8985     10540
+
+  Confusion Matrix (counts):
+      backgr   bicycl      car   pedest
+    backgr      7550       27      484       74
+    bicycl       107      202        8       13
+    car          240        0     1515        0
+    pedest        95       21        4      200
+
+  Per-Class Recall (from confusion matrix):
+    background     : 0.9281
+    bicyclist      : 0.6121
+    car            : 0.8632
+    pedestrian     : 0.6250
+
+  Confusion matrix saved → results/confusion/test_confusion.png
+  Test report saved      → results/logs/test_report_20260310_111244.log
+
+Done.
