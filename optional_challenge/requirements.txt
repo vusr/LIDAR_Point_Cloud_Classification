@@ -1,0 +1,4 @@
+# Additional dependencies for the optional challenge pipeline.
+# All other packages (torch, numpy, scikit-learn, matplotlib, tqdm)
+# are already covered by the top-level requirements.txt.
+filterpy
